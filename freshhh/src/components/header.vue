@@ -4,7 +4,12 @@
       <div class="header-wrapper">
         <div class="logo-circle-box" id="logo-circle-box"></div>
         <div class="logo" id="logo">
-          <router-link to="/"> logo</router-link>
+          <router-link to="/">
+            <img
+              class="logo-image"
+              id="logo-image"
+              src="../assets/logo_trans_w.png"
+          /></router-link>
         </div>
         <nav>
           <div class="nav-links" id="navLinks">
@@ -65,9 +70,15 @@ export default {
         document.documentElement.scrollTop > 50
       ) {
         document.getElementById("logo").style.height = "60px";
+
+        document.getElementById("logo").style.marginTop = "0px";
+        document.getElementById("logo-image").style.height = "100px";
         document.getElementById("logo-circle-box").style.top = "-200%";
       } else {
         document.getElementById("logo").style.height = "100px";
+
+        document.getElementById("logo").style.marginTop = "15px";
+        document.getElementById("logo-image").style.height = "120px";
         document.getElementById("logo-circle-box").style.top = "-150%";
       }
     }
@@ -109,11 +120,16 @@ export default {
   display: flex;
   justify-content: center; */
   height: 100px;
-  width: 150px;
-  background: pink;
-  margin-left: 90px;
+  width: 200px;
+  /* background: pink; */
+  margin-left: 60px;
   margin-top: 15px;
   z-index: 2;
+  transition: 0.2s;
+}
+.logo-image {
+  height: 120px;
+  width: auto;
   transition: 0.2s;
 }
 nav {
