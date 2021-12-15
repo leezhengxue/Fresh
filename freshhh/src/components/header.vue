@@ -12,8 +12,16 @@
           /></router-link>
         </div>
         <nav>
+          <div class="burger" @click="openmenu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
           <div class="nav-links" id="navLinks">
             <ul>
+              <div class="burger-close" @click="closemenu">
+                <a class="close-logo">x</a>
+              </div>
               <li>
                 <router-link to="/">Home</router-link>
               </li>
@@ -82,6 +90,20 @@ export default {
         document.getElementById("logo-circle-box").style.top = "-150%";
       }
     }
+    function closemenu() {
+      var navLinks = document.getElementById("navLinks");
+      navLinks.style.right = "-350px";
+      console.log("clicked close");
+    }
+    function openmenu() {
+      var navLinks = document.getElementById("navLinks");
+      navLinks.style.right = "0px";
+      console.log("clicked open");
+    }
+    return {
+      closemenu,
+      openmenu,
+    };
   },
 };
 </script>
@@ -157,5 +179,78 @@ nav ul li a {
 nav ul li :hover {
   color: #ffd008;
   cursor: pointer;
+}
+
+/* -----------HAMBURGER------------- */
+.burger {
+  margin: 40px 120px 0 0;
+  display: none;
+}
+.burger-close {
+  display: none;
+}
+.burger-line {
+  height: 3px;
+  width: 30px;
+  background: white;
+  margin: 5px;
+}
+.close-logo {
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .logo-circle-box {
+    left: 50%;
+    margin-left: -150px;
+    top: -150%;
+  }
+  .logo {
+    margin-left: -30px;
+  }
+  .burger {
+    display: block;
+    /* position: relative;
+    left: 70px; */
+    margin: 40px 20px 0 0;
+  }
+  .burger-close {
+    display: block;
+  }
+  nav {
+    line-height: 70px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  .nav-links {
+    background: #222222;
+    display: block;
+    position: absolute;
+    right: -350px;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    z-index: 99;
+    transition: 0.5s ease-in;
+  }
+  .nav-links ul {
+    margin: 0 auto;
+  }
+
+  nav ul li a {
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+  /* .nav-active {
+    transform: translateX(0%);
+  } */
+  .logo {
+    width: 100%;
+  }
+  .logo img {
+    margin-left: 90px;
+  }
 }
 </style>

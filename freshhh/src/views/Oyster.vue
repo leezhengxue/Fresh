@@ -7,8 +7,28 @@
       <div class="hero-wrapper"><h1>Oysters</h1></div>
     </div>
     <div class="content-section">
-      <div class="button-section">BUTTON TO SCROLL TO SPECIFIC COUNTRY</div>
-      <div class="oysters-section">
+      <div class="button-section">
+        <div class="button-section-wrapper">
+          <a class="button-text" href="#ireland"
+            ><div class="buttons ireland-css">
+              Ireland
+              <img class="country_flag_icon" src="../assets/ireland.png" /></div
+          ></a>
+          <a class="button-text" href="#france"
+            ><div class="buttons france-css">
+              France
+              <img class="country_flag_icon" src="../assets/france.png" /></div
+          ></a>
+          <a class="button-text" href="#australia"
+            ><div class="buttons australia-css">
+              Australia<img
+                class="country_flag_icon"
+                src="../assets/australia.png"
+              /></div
+          ></a>
+        </div>
+      </div>
+      <div class="oysters-section" id="ireland">
         <div class="oysters-section-wrapper">
           <div class="oyster-card-1 oyster-card-1-special ireland-css">
             <div class="oyster-content-wrapper">
@@ -17,7 +37,7 @@
                 <h2>Naked By The Sea</h2>
 
                 <!-- <div class="oyster-image"> -->
-                <img class="oyster-image" src="../assets/urchin_2.png" />
+                <img class="oyster-image" src="../assets/oyster_1.png" />
                 <!-- </div> -->
               </div>
 
@@ -57,7 +77,7 @@
                 <h3>Ireland</h3>
                 <h2>Kissing By The Sea</h2>
 
-                <div class="oyster-image">Oyster image</div>
+                <img class="oyster-image" src="../assets/oyster_2.png" />
               </div>
 
               <div class="line"></div>
@@ -96,7 +116,7 @@
                 <h3>Ireland</h3>
                 <h2>Breezing By The Sea</h2>
 
-                <div class="oyster-image">Oyster image</div>
+                <img class="oyster-image" src="../assets/oyster_3.png" />
               </div>
 
               <div class="line"></div>
@@ -107,7 +127,7 @@
                 with a good meat to shell ratio.
               </div>
 
-              <div class="content-description-2">
+              <div class="content-description-2" id="france">
                 <h4>Nose</h4>
                 <p>Hints of salty breeze, iodine</p>
                 <h4>Body</h4>
@@ -134,7 +154,7 @@
                 <h3>France</h3>
                 <h2>Glory Moly</h2>
 
-                <div class="oyster-image">Oyster image</div>
+                <img class="oyster-image" src="../assets/oyster_4.png" />
               </div>
 
               <div class="line"></div>
@@ -145,7 +165,7 @@
                 distinctive Fin flavour.
               </div>
 
-              <div class="content-description-2">
+              <div class="content-description-2" id="australia">
                 <h4>Nose</h4>
                 <p>Strong salty sea breeze</p>
                 <h4>Body</h4>
@@ -172,7 +192,7 @@
                 <h3>Australia</h3>
                 <h2>Rocking Paradise</h2>
 
-                <div class="oyster-image">Oyster image</div>
+                <img class="oyster-image" src="../assets/oyster_5.png" />
               </div>
 
               <div class="line"></div>
@@ -210,7 +230,7 @@
                 <h3>Australia</h3>
                 <h2>Island Breath</h2>
 
-                <div class="oyster-image">Oyster image</div>
+                <img class="oyster-image" src="../assets/oyster_6.png" />
               </div>
 
               <div class="line"></div>
@@ -298,9 +318,36 @@ export default {
 }
 
 .button-section {
-  height: 100px;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #231f20;
 }
-
+.button-section-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.buttons {
+  height: 40px;
+  width: 150px;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.button-text {
+  text-decoration: none;
+  color: white;
+}
+.country_flag_icon {
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+}
 .oysters-section {
   background: #231f20;
   display: flex;
@@ -347,7 +394,6 @@ export default {
 .oyster-card-1 .oyster-image {
   height: 200px;
   width: 150px;
-  background: orange;
   position: absolute;
   left: -30px;
   bottom: -10px;
@@ -447,7 +493,6 @@ export default {
 .oyster-card-2 .oyster-image {
   height: 200px;
   width: 150px;
-  background: orange;
   position: absolute;
   right: -30px;
   bottom: -10px;
@@ -520,17 +565,18 @@ export default {
 
 .ireland-css {
   background: transparent;
-  border: solid white;
+  border: solid white 3px;
 }
 .ireland-css .line {
   background: white;
 }
 .france-css {
   background: #333333;
+  border: solid grey 3px;
 }
 .australia-css {
   background: #6a5f57;
-  border: solid #544234;
+  border: solid #544234 3px;
 }
 @media (max-width: 1024px) {
   .oysters-section-wrapper {
@@ -549,6 +595,39 @@ export default {
   .hero-wrapper h1 {
     font-size: 36px;
     letter-spacing: 20px;
+  }
+  .button-section-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .oyster-card-1 {
+    height: auto;
+    border-radius: 0;
+  }
+
+  .oyster-card-1 .oyster-image {
+    position: static;
+  }
+  .oyster-card-1 .content-description-2 {
+    margin-left: 0;
+  }
+  .oyster-card-1 .content-description-3 {
+    margin-left: 0;
+  }
+  .oyster-card-2 {
+    height: auto;
+    border-radius: 0;
+  }
+  .oyster-card-2 .oyster-image {
+    position: static;
+  }
+  .oyster-card-2 .content-description-2 {
+    margin-right: 0;
+  }
+  .oyster-card-2 .content-description-3 {
+    margin-right: 0;
   }
 }
 
