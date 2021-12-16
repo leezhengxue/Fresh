@@ -10,7 +10,12 @@
       <div class="contact-section-wrapper">
         <div class="box box-content-1">
           <h2>Call Us</h2>
-          <p>+6016-323 5018</p>
+          <a
+            href="https://wa.link/chlkc3"
+            target="__blank"
+            style="text-decoration: none"
+            ><p>+6016-323 5018</p></a
+          >
         </div>
         <div class="box box-image-1">
           <!-- <img src="../assets/urchin_image.jpg" /> -->

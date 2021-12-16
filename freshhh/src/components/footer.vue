@@ -9,12 +9,20 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
         <div class="icons-container">
-          <div class="fa fa-facebook"></div>
-          <div class="fa fa-instagram"></div>
-          <div class="fa fa-whatsapp"></div>
+          <a href="https://www.facebook.com/freshhhoysters" target="__blank">
+            <div class="fa fa-facebook"></div
+          ></a>
+          <a href="https://www.instagram.com/freshhh_co/" target="__blank">
+            <div class="fa fa-instagram"></div
+          ></a>
+          <a href="https://wa.link/chlkc3" target="__blank">
+            <div class="fa fa-whatsapp"></div
+          ></a>
         </div>
         <h3>freshhhco9@gmail.com</h3>
-        <h3>+6016-323 5018</h3>
+        <h3>
+          <a href="https://wa.link/chlkc3" target="__blank"> +6016-323 5018</a>
+        </h3>
 
         <div class="line"></div>
         <h4>Copyright © 2021. Freshhh Sdn. Bhd. All rights reserved.</h4>
@@ -70,6 +78,10 @@ export default {
   font-size: 18px;
   font-weight: lighter;
   margin: 3px 0;
+}
+.footer-wrapper a {
+  text-decoration: none;
+  color: white;
 }
 .footer-wrapper h4 {
   letter-spacing: 1px;

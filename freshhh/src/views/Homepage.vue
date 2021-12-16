@@ -124,7 +124,10 @@
               believe this is one of the reasons why our oysters are some of the
               best in the world.
             </p>
-            <h4 style="color: black">More information ➜</h4>
+
+            <router-link to="/oyster" class="rm-text-decoration"
+              ><h4 style="color: black">More information ➜</h4></router-link
+            >
           </div>
         </div>
       </div>
@@ -143,7 +146,9 @@
               from reputable sources that always deliver fresh caviar of the
               highest quality.
             </p>
-            <h4>More information ➜</h4>
+            <router-link to="/caviar" class="rm-text-decoration"
+              ><h4>More information ➜</h4></router-link
+            >
           </div>
         </div>
       </div>
@@ -161,7 +166,9 @@
               folded into pasta, or pureed into butter. Sea Urchin is perishable
               and is best eaten on the day of arrival.
             </p>
-            <h4>More information ➜</h4>
+            <router-link to="/urchin" class="rm-text-decoration"
+              ><h4>More information ➜</h4></router-link
+            >
           </div>
         </div>
       </div>
@@ -179,7 +186,9 @@
               chuckle when you hear from us that "Lobsters will arrive ALIVE and
               FEISTY"!
             </p>
-            <h4>More information ➜</h4>
+            <router-link to="/lobster" class="rm-text-decoration"
+              ><h4>More information ➜</h4></router-link
+            >
           </div>
         </div>
       </div>
@@ -198,7 +207,14 @@
             </p>
           </div>
         </div>
-        <div class="contact-link">Contact Us ➜</div>
+        <div class="contact-link">
+          <router-link
+            to="/contact-us"
+            class="rm-text-decoration"
+            style="color: black"
+            >Contact Us ➜</router-link
+          >
+        </div>
       </div>
     </div>
     <footernav />
@@ -461,6 +477,10 @@ svg {
   font-size: 24px;
   letter-spacing: 12px;
   text-transform: uppercase;
+}
+
+.rm-text-decoration {
+  text-decoration: none;
 }
 /* -------------------------------IMAGES--------------------------------- */
 .oyster-image {
