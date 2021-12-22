@@ -28,7 +28,7 @@
         <div class="box box-content-3">
           <h2>Address</h2>
           <p>
-            NO. 15, Jlana 34b, Kampung Cheras Baru, 56100 Kuala Lumpur, Selangor
+            NO. 15, Jalan 34b, Kampung Cheras Baru, 56100 Kuala Lumpur, Selangor
           </p>
         </div>
         <div class="box box-image-3"></div>
